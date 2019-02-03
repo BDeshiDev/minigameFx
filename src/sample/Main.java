@@ -54,12 +54,12 @@ public class Main extends Application {
                     double boxPos = r.getLayoutX();
                     System.out.println("box at "+ boxPos);
                     if(boxPos>100)
-                        boxPos -= 100;
-                    if(boxPos <10)
+                        boxPos =  100 - (boxPos -100);
+                    if((100- boxPos) <10)
                         retMessage = "prefect";
-                    else if(boxPos <30)
+                    else if((100- boxPos) <30)
                         retMessage = "great";
-                    else if(boxPos <50)
+                    else if((100- boxPos) <50)
                         retMessage = "okay";
                     else
                         retMessage = "epic fail";
